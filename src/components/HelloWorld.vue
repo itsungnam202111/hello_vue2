@@ -2,6 +2,9 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>{{ msg2 }}</h2>
+    <hr/>
+    <h2>{{ msg2 }}</h2>
+    <h2>{{ msg2 }}</h2>
   </div>
 </template>
 
