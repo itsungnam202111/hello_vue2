@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 연습 4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <style>
+        button {
+            margin: 5px;
+        }
+    </style>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module">
+        $(function () {
+            const AttributeBinding = {
+                data() {
+                    return {
+                        message: '이 페이지를 다음 시간에 열었습니다. ' + new Date().toLocaleString()
+                    }
+                }
+            }
+            Vue.createApp(AttributeBinding).mount('#app')
+        });
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <span v-bind:title="message">
+            여기에 마우스를 올려두고 잠시 기다리면 제목이 동적으로 바뀝니다!
+        </span>
+    </div>
+</body>
+
+</html>

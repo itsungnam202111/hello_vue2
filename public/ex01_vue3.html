@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 연습 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>    
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        {{ msg1 }}
+        <hr>
+        {{ msg2 }}
+        <hr>
+        {{ msg3 }}
+    </div>
+    <script>
+        const hello = {
+            data() {
+                return { msg1 : "Hello World!!!!", msg2 : "Hello Vue3!!!", msg3 : "처음 시작하는 Vue3!!!" }
+            }
+        }
+        Vue.createApp(hello).mount('#app')
+    </script>
+</body>
+
+</html>

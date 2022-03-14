@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 연습 5</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <style>
+        button {
+            margin: 5px;
+        }
+    </style>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="module">
+        $(function () {
+            const EventHandling = {
+                data() {
+                    return {
+                        message: 'Hello Vue.js!'
+                    }
+                },
+                methods: {
+                    reverseMessage() {
+                        this.message = this.message
+                            .split('')
+                            .reverse()
+                            .join('')
+                    },
+                    appendStar() {
+                        this.message = this.message + "★";
+                    },
+                    prependStar() {
+                        this.message = "★" + this.message;
+                    },
+                }
+            }
+            Vue.createApp(EventHandling).mount('#app')
+        });
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">문자열 뒤집기 1</button>
+        <button @click="reverseMessage">문자열 뒤집기 2</button>
+        <button v-on:click="prependStar">앞에 별붙이기</button>
+        <button @click="appendStar">뒤에 별붙이기</button>
+    </div>
+</body>
+
+</html>
