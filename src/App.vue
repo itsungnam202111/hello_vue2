@@ -1,21 +1,11 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="반갑습니다. Vue!! 애플리케이션"/>
-  <HelloWorld2 name="한사람" age="33" gender="true"/>
-  <HelloWorld2 name="두사람" age="18" gender="false"/>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/json">사자성어</router-link> |
+    <router-link to="/chunja">천자문</router-link>
+  </nav>
+  <router-view/>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import HelloWorld2 from './components/HelloWorld2.vue'
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    HelloWorld2
-  }
-}
-</script>
 
 <style>
 #app {
@@ -24,6 +14,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+nav {
+  padding: 10px; text-align: right;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
