@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/json">사자성어</router-link> |
-    <router-link to="/chunja">천자문</router-link>
+    <router-link to="/chunja">천자문</router-link> |
+    <router-link to="/icon">부트스트랩</router-link> 
   </nav>
   <router-view/>
 </template>

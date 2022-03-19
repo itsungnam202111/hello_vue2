@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TextFileView from '../views/TextFileView.vue'
+import BootstrapIcon from '../views/BootstrapIcon.vue'
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: '/chunja',
     name: 'chunja',
     component: TextFileView
+  },
+  {
+    path: '/icon',
+    name: 'icon',
+    component: BootstrapIcon
   },
 ]
 
