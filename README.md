@@ -1,3 +1,8 @@
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gomah/hello_vue2)
+
+----
+
 # my_app1
 
 ## Project setup
